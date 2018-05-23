@@ -54,10 +54,10 @@ function handleCloudbitEvent(event) {
       // Do whatever you want with the amplitde
       console.log(event.payload)
       console.log('cloudBit input received: %d%', event.payload.percent)
-      fetch('https://manufacturingfr.my.salesforce.com/services/data/v41.0/sobjects/LittleBits_Event__e/', { 
+      fetch('https://legocity4.my.salesforce.com/services/data/v42.0/sobjects/Tire_event__e', { 
         method: 'POST',
-        body: JSON.stringify({"id__c":"123","Power__c":event.payload.percent,"Device_ID__c":"Lego City"}),
-        headers: {'Content-Type': 'application/json', 'authorization': 'Bearer 00D1r000000rzxu!AR8AQE1u8zuyWwxYrGOGyffV94Kinqe._Ti6VIjdl1CB3bVZ.n_WpKf2DQz34E.0a.J5Bvz8koQioz2KFbzYIaB8REDhDXkn'},
+        body: JSON.stringify({"Tire_id__c":"123","Tire_id__c":event.payload.percent}),
+        headers: {'Content-Type': 'application/json', 'authorization': 'Bearer 00Df4000002cqlJ!AREAQKXMSdLDur4V1OVzQoHyHfEZHBdOqUlLhTbZfEzYMZ2GhxStlaXoXv3T8G_f8YXSX9iQtDcyVtabc.oFQ71GqyduYX9p'},
       })
 	      .then(res => res.json())
         .then(json => console.log("json", json))
