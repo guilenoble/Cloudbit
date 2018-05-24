@@ -8,6 +8,39 @@ var fetch = require('node-fetch');
 var port = Number(process.env.PORT) || 7800
 var app = koa()
 
+/* Beginning code from Julien */
+
+const EventSource = require("eventsource");
+
+const url = "https://api-http.littlebitscloud.cc/v2/devices/243c201f98c5/input";
+
+const token =
+  "xxxxxxxxxx72e5a18a9d7413ecc8534da02785bee59879c0789197143";
+
+const options = { headers: { Authorization: token } };
+
+const es = new EventSource(url, options);
+
+// time to wait in ms
+const delay = 1000;
+
+let lastHit = new Date().getTime();
+
+es.onmessage = function(event) {
+  const percent = JSON.parse(event.data).percent;
+  const elapsed = new Date().getTime() - lastHit;
+  // be sure to wait a little
+  if (percent !== undefined && elapsed > delay) {
+    // send data to sales force
+    lastHit = new Date().getTime();
+  }
+};
+
+es.onerror = function(e) {
+  console.log(e);
+};
+
+/* End code from Julien */
 
 
 app.use(koaParseJson())
