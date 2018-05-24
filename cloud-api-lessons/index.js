@@ -1,4 +1,4 @@
-var koa = require('koa')
+/* var koa = require('koa')
 var koaParseJson = require('koa-parse-json')
 var route = require('koa-route')
 var fetch = require('node-fetch');
@@ -6,7 +6,7 @@ var fetch = require('node-fetch');
 
 
 var port = Number(process.env.PORT) || 7800
-var app = koa()
+var app = koa() */
 
 /* Beginning code from Julien */
 
@@ -43,13 +43,13 @@ es.onerror = function(e) {
 
 /* End code from Julien */
 
-
+/*
 app.use(koaParseJson())
 
 
 
-/* On a root GET respond with a friendly message explaining that this
-application has no interesting client-side component. */
+ On a root GET respond with a friendly message explaining that this
+application has no interesting client-side component. 
 
 app.use(route.get('/', function *() {
 
@@ -57,9 +57,9 @@ app.use(route.get('/', function *() {
 
 }))
 
+*/
 
-
-/* On a root POST log info about the (should be) cloudBit event. */
+/* On a root POST log info about the (should be) cloudBit event. 
 
 app.use(route.post('/', function *() {
 
@@ -105,3 +105,4 @@ function handleCloudbitEvent(event) {
       break
   }
 }
+*/
