@@ -24,6 +24,8 @@ const es = new EventSource(url, options);
 // time to wait in ms
 const delay = 1000;
 
+console.log('Hello Hello');
+
 let lastHit = new Date().getTime();
 
 es.onmessage = function(event) {
