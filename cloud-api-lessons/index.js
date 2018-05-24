@@ -32,6 +32,7 @@ es.onmessage = function(event) {
   // be sure to wait a little
   if (percent !== undefined && elapsed > delay) {
     // send data to sales force
+    console.log(percent); 
     lastHit = new Date().getTime();
   }
 };
