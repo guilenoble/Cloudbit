@@ -50,7 +50,8 @@ es.onerror = function(e) {
 };
 
 /* End code from Julien */
-
+app.listen(port)
+console.log('App booted on port %d', port)
 
 
 
