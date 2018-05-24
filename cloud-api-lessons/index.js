@@ -36,6 +36,12 @@ es.onmessage = function(event) {
     // send data to sales force
     console.log(percent); 
     lastHit = new Date().getTime();
+	  
+	  fetch('https://legocity4.my.salesforce.com/services/data/v42.0/sobjects/Tire_event__e', { 
+  method: 'POST',
+  body: JSON.stringify({"Tire_id__c":"123","Pressure__c":event.payload.percent}),
+  headers: {'Content-Type': 'application/json', 'authorization': 'Bearer 00Df4000002cqlJ!AREAQAsCFZdD3QvHM4fuMB3O.4FkSTyT1xMNFKINBSou4.YP73qUO9ejnmPelGXx7.N4bwUMxCjqETZWVYIGnzF0JjQYRCiY'},
+})
   }
 };
 
@@ -44,6 +50,11 @@ es.onerror = function(e) {
 };
 
 /* End code from Julien */
+
+
+
+
+
 
 /*
 app.use(koaParseJson())
