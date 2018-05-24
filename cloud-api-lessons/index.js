@@ -1,4 +1,4 @@
-/* var koa = require('koa')
+var koa = require('koa')
 var koaParseJson = require('koa-parse-json')
 var route = require('koa-route')
 var fetch = require('node-fetch');
@@ -6,7 +6,7 @@ var fetch = require('node-fetch');
 
 
 var port = Number(process.env.PORT) || 7800
-var app = koa() */
+var app = koa() 
 
 /* Beginning code from Julien */
 
