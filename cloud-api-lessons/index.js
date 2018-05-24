@@ -15,7 +15,7 @@ const EventSource = require("eventsource");
 const url = "https://api-http.littlebitscloud.cc/v2/devices/243c201f98c5/input";
 
 const token =
-  "xxxxxxxxxx72e5a18a9d7413ecc8534da02785bee59879c0789197143";
+  "0818ce2545bb60e2672e5a18a9d7413ecc8534da02785bee59879c0789197143";
 
 const options = { headers: { Authorization: token } };
 
